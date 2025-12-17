@@ -1,158 +1,186 @@
-Network Traffic Analysis with Machine Learning 🚦📊
- Abstract
+# Network Traffic Analysis with Machine Learning
 
-Modern computer networks generate massive volumes of traffic, making manual monitoring and analysis inefficient and error-prone. This project presents a network traffic analysis system that processes packet-level network data to extract meaningful insights such as protocol usage, traffic trends, packet size distribution, and top communicating hosts.
+##  Abstract
 
-The system focuses on data analysis and visualization, forming a strong foundation for future machine learning–based anomaly detection and cybersecurity applications. By converting raw packet data into structured features and visual representations, the project helps in understanding network behavior and identifying suspicious patterns.
+Modern computer networks generate massive volumes of traffic, making manual monitoring and analysis inefficient and error-prone. This project presents a **Network Traffic Analysis System** that processes packet-level network data to extract meaningful insights such as protocol usage, traffic trends, packet size distribution, and top communicating hosts.
 
- Project Overview
+The system focuses on **data analysis and visualization**, forming a strong foundation for future **machine learning–based anomaly detection and cybersecurity applications**. By transforming raw packet data into structured features and visual representations, the project enables better understanding of network behavior and potential security risks.
 
-The Network Traffic Analysis with ML project analyzes captured network packet data stored in CSV format and performs structured traffic analysis. The system decodes packet attributes such as protocol type, packet size, timestamps, and source information, and then generates analytical insights and visual outputs.
+---
 
-This project was developed as an academic networking and data analysis project, demonstrating how packet-level traffic data can be processed, analyzed, and prepared for machine learning–based security solutions.
+##  Project Overview
 
- Objectives
+The **Network Traffic Analysis with Machine Learning** project analyzes captured network packet data stored in CSV format and performs structured traffic analysis. The system decodes packet attributes such as protocol type, packet size, timestamps, and source information, and generates analytical insights along with visual outputs.
 
-To analyze network traffic using packet-level data
+This project was developed as an **academic final-year networking and data analysis project**, demonstrating how packet-level traffic data can be processed, analyzed, and prepared for ML-based security solutions.
 
-To identify protocol usage and traffic distribution patterns
+---
 
-To visualize traffic trends over time
+##  Objectives
 
-To detect top communicating hosts (top talkers)
+* Analyze network traffic using packet-level data
+* Identify protocol usage and traffic distribution patterns
+* Visualize traffic trends over time
+* Detect top communicating hosts (top talkers)
+* Prepare meaningful features for future ML-based anomaly detection
+* Understand practical applications of network traffic analysis in cybersecurity
 
-To prepare meaningful features for future ML-based anomaly detection
+---
 
-To understand practical applications of network traffic analysis
+##  System Architecture
 
- System Architecture
+The system follows a modular architecture with the following components:
 
-The system follows a modular architecture consisting of the following components:
+* **Packet Capture Module:** Handles packet data input from CSV files
+* **Packet Decoder Module:** Extracts relevant packet attributes such as protocol, size, and timestamps
+* **Traffic Analyzer Module:** Performs statistical analysis on decoded data
+* **Visualization Layer:** Generates graphical outputs for easy interpretation
 
-Packet Capture Module: Handles packet data input from CSV files
+This modular separation improves **scalability, maintainability, and readability** of the system.
 
-Packet Decoder Module: Extracts relevant packet attributes
+---
 
-Traffic Analyzer Module: Performs statistical analysis on decoded data
+##  Functional Features
 
-Visualization Layer: Generates graphical outputs for easy interpretation
+* Packet-level traffic analysis
+* Protocol distribution analysis
+* Traffic volume analysis over time
+* Packet size variation analysis
+* Identification of top network talkers
+* Graphical visualization of analysis results
+* Maven-based project structure
 
-This separation of responsibilities improves scalability, readability, and maintainability.
+---
 
- Functional Features
+##  Technology Stack
 
-Packet-level traffic analysis
+### Programming & Backend
 
-Protocol distribution analysis
+* **Java**
+* **Maven**
 
-Traffic volume analysis over time
+### Data & Analysis
 
-Packet size variation analysis
+* CSV-based packet datasets
+* Statistical traffic analysis techniques
 
-Identification of top network talkers
+### Visualization
 
-Graphical visualization of results
+* PNG-based graph outputs
 
-Maven-based project structure
+### Tools & Environment
 
- Technology Stack
-Programming & Backend
+* Eclipse / IntelliJ IDEA
+* Git & GitHub
 
-Java
+---
 
-Maven
+##  Project Structure
 
-Data & Analysis
-
-CSV-based packet data
-
-Statistical traffic analysis
-
-Visualization
-
-PNG-based graph outputs
-
-Tools & Environment
-
-Eclipse / IntelliJ IDEA
-
-Git & GitHub
-
- Project Structure
+```
 NetworkTrafficAnalyzer/
 │
 ├── src/
-│   ├── main/java/com/alok/trafficanalyzer/
-│   │   ├── Analyzer.java
-│   │   ├── PacketCapture.java
-│   │   └── PacketDecoder.java
-│   └── README.md
+│   └── main/java/com/alok/trafficanalyzer/
+│       ├── Analyzer.java
+│       ├── PacketCapture.java
+│       └── PacketDecoder.java
 │
 ├── data/
-│   └── packets.csv
+│   ├── packets.csv
+│   └── captured_packets.csv
 │
-├── captured_packets.csv
 ├── network_traffic_analyzer-commented.java
 ├── pom.xml
-└── .gitignore
+├── .gitignore
+└── README.md
+```
 
- Sample Output & Visualizations
+---
+
+##  Sample Output & Visualizations
 
 The system generates multiple visual outputs to represent network traffic behavior, including:
 
-Protocol Distribution Graph
+* Protocol Distribution Graph
+* Packets vs Time Analysis
+* Packet Size vs Time Analysis
+* Top Network Talkers Visualization
 
-Packets vs Time Analysis
+These visualizations assist in quickly understanding traffic patterns and identifying anomalies.
 
-Packet Size vs Time Analysis
+---
 
-Top Network Talkers Visualization
+##  Installation & Setup
 
-These visualizations help in quickly understanding traffic patterns and identifying anomalies.
+### Step 1: Clone the Repository
 
- Installation & Setup
-Step 1: Clone the Repository
+```bash
 git clone https://github.com/preeti-kammar/Network-Traffic-Analysis-with-ML-.git
 cd NetworkTrafficAnalyzer
+```
 
-Step 2: Build the Project
+### Step 2: Build the Project
+
+```bash
+dir pom.xml
 mvn clean install
+```
 
-Step 3: Run the Application
-java -cp target/classes com.alok.trafficanalyzer.Analyzer
+### Step 3: Run the Application
 
- Results & Outcomes
+```bash
+mvn exec:java -Dexec.mainClass="com.alok.trafficanalyzer.PacketCapture"
+```
 
-Successful analysis of packet-level network data
+---
 
-Clear visualization of protocol usage and traffic trends
+##  Results & Outcomes
 
-Identification of top communicating hosts
+* Successful analysis of packet-level network data
+* Clear visualization of protocol usage and traffic trends
+* Identification of top communicating hosts
+* Structured feature extraction suitable for ML models
+* Demonstration of practical network traffic analysis techniques
+  
+* Output Details :
+Simple explanations for each of the network analysis graphs shown as the outputs:
+1.Packets vs Size
+This graph shows how many packets were observed for different packet sizes. 
+The tall, thin bars show that packets of specific sizes (such as 300, 400, 1200, and 1500 bytes) appeared, 
+with each size occurring about equally often.
+2.Packets vs Time 
+This graph shows how many network packets are sent or received over time, measured per second. 
+The flat, straight line indicates that packets were transmitted at a constant rate during the captured period.
+3.Protocol Distribution
+This bar chart shows which network protocols (like UDP, TCP, and ICMP) were used the most. 
+UDP and TCP were observed the most frequently and equally, while ICMP appeared less often during the capture.
+4.Size vs Time
+This graph shows the total size of network traffic (in bytes) over time. 
+The line goes up and down, meaning the amount of data transferred varied at each moment. 
+Sometimes there was less traffic, other times it spiked quickly.
+5.Top Source IPs
+This bar chart displays which devices (source IP addresses) sent the most packets in the network. 
+Each bar represents a different IP, and similar heights mean each device contributed nearly the same amount of traffic.
 
-Structured feature extraction suitable for ML models
+---
 
-Demonstration of practical network traffic analysis techniques
+##  Future Enhancements
 
- Future Enhancements
+* Integration of machine learning models for anomaly detection
+* Real-time packet capture and live traffic monitoring
+* Dashboard-based visualization using web technologies
+* Support for large-scale network datasets
+* Extension to intrusion detection systems (IDS)
 
-Integration of machine learning models for anomaly detection
+---
 
-Real-time packet capture and live traffic monitoring
+##  Learning Outcomes
 
-Dashboard-based visualization using web technologies
+* Understanding of packet-level network traffic behavior
+* Feature extraction from raw network data
+* Data visualization techniques for traffic analysis
+* Modular Java application design
+* Strong foundation for ML-based network security solutions
 
-Support for large-scale network datasets
-
-Extension to intrusion detection systems (IDS)
-
- Learning Outcomes
-
-Understanding of packet-level network traffic
-
-Feature extraction from raw network data
-
-Data visualization for traffic analysis
-
-Modular Java application design
-
-Foundation for ML-based security solutions
+---
