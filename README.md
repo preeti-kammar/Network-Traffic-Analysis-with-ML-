@@ -144,21 +144,27 @@ mvn exec:java -Dexec.mainClass="com.alok.trafficanalyzer.PacketCapture"
 * Demonstration of practical network traffic analysis techniques
   
 * Output Details :
+  
 Simple explanations for each of the network analysis graphs shown as the outputs:
+
 1.Packets vs Size
 This graph shows how many packets were observed for different packet sizes. 
 The tall, thin bars show that packets of specific sizes (such as 300, 400, 1200, and 1500 bytes) appeared, 
 with each size occurring about equally often.
+
 2.Packets vs Time 
 This graph shows how many network packets are sent or received over time, measured per second. 
 The flat, straight line indicates that packets were transmitted at a constant rate during the captured period.
+
 3.Protocol Distribution
 This bar chart shows which network protocols (like UDP, TCP, and ICMP) were used the most. 
 UDP and TCP were observed the most frequently and equally, while ICMP appeared less often during the capture.
+
 4.Size vs Time
 This graph shows the total size of network traffic (in bytes) over time. 
 The line goes up and down, meaning the amount of data transferred varied at each moment. 
 Sometimes there was less traffic, other times it spiked quickly.
+
 5.Top Source IPs
 This bar chart displays which devices (source IP addresses) sent the most packets in the network. 
 Each bar represents a different IP, and similar heights mean each device contributed nearly the same amount of traffic.
