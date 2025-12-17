@@ -1,0 +1,16 @@
+# Maven / Java
+target/
+*.class
+*.jar
+
+# Generated outputs
+out/
+output/
+
+# Logs
+*.log
+
+# IDE files (optional – recommended)
+.settings/
+.classpath
+.project
